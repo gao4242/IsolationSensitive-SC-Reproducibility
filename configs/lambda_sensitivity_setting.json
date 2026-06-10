@@ -1,0 +1,33 @@
+{
+  "experiment_name": "lambda_sensitivity_analysis",
+  "description": "Sensitivity analysis of the movement-weight parameter lambda.",
+  "base_setting": {
+    "time_slots": 30,
+    "initial_coarsening_threshold_delta0": 4,
+    "coarsening_threshold_delta": 4,
+    "num_regional_nodes": 2500,
+    "worker_task_ratio": 1.2,
+    "worker_capacity_l": 3,
+    "dummy_no_assignment_weight_theta": 0.0,
+    "rolling_horizon_H_for_RH_KM": 2
+  },
+  "lambda_values": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "random_seed_file": "configs/seeds_30.txt",
+  "algorithms": [
+    "BaseKM",
+    "OnlineKM",
+    "OnlineARC",
+    "RH-KM"
+  ],
+  "notes": [
+    "For each tested lambda, all algorithms should be rerun under the same 30 random seeds and the same generated online scenarios.",
+    "Objective values should be compared among algorithms under the same lambda because changing lambda changes the scale of the combined assignment objective value.",
+    "The improvement of OnlineARC is computed relative to BaseKM under the same lambda."
+  ]
+}
