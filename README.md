@@ -30,6 +30,8 @@ The `data/processed_txt/legacy/` directory contains legacy processed text files 
 
 ## Source code
 
+In this repository, “legacy” refers to files inherited from the original implementation workflow. It does not mean that the files are invalid; these files are released to document the original data format and graph-matching implementation.
+
 The `src/cpp/legacy/` directory contains selected legacy C++ source files from the original graph-matching implementation. These files are released to improve transparency of the original graph construction, regional merging, and KM-based matching workflow.
 
 The selected legacy C++ source files are not a complete reproduction driver for all revised multi-seed experiments reported in Tables 2-5 of the manuscript. The revised experimental protocol is documented by the configuration files and example scripts in this repository.
